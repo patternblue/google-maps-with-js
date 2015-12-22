@@ -1,0 +1,38 @@
+input.error{
+	background: #ff0000;
+	border-color: #ff0000;
+}
+#submitError{
+	display: none;
+}
+#ajaxContent{
+	width: 1020px;
+	margin: 0 auto;
+}
+#ajaxNotification{
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	display: none;
+	background: #99e;
+	bottom: 0px;
+}
+#mapForm{
+	float: left;
+	width: 50%;
+}
+#map{
+	width: 550px;
+	height: 400px;
+
+}
+/*#ajaxContent .movie{
+	overflow: auto;
+	margin: 10px 0;
+}
+#ajaxContent img{
+	float: left;
+}
+#ajaxContent .movieDetails{
+	list-style-type: none;
+}*/

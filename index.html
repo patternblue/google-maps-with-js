@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Odin Project: Putting Google Maps Onto Your Site with Javascript</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+ 	<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+	<!-- // <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
+	<script type="text/javascript" src="js/google-maps-with-js.js"></script>
+	 <script async defer
+      src="https://maps.googleapis.com/maps/api/js?callback=googleMapsForm.main">
+    </script>
+
+</head>
+<body>
+	<form id="mapForm">
+		<fieldset>
+			<legend>Google Maps Form: Place a marker</legend>
+			<p>
+				<label for="latitude">Latitude (-90 to 90)</label>
+				<input type="text" name="latitude" id="latitude" validation="required"/>
+			</p>
+			<p>
+				<label for="longitude">Longitude (-180 to 180)</label>
+				<input type="text" name="longitude" id="longitude" validation="required"/>
+			</p>
+			<p>
+				<label for="message">Message</label>
+				<input type="text" name="message" id="message"/>
+			</p>
+			<p>
+				<input type="submit" id="submit"/>
+				<div id="submitError">Please fill in all fields.</div>
+			</p>
+			<p>
+			 	<input type="reset" id="reset" value="Reset"/>
+			</p>
+
+		</fieldset>
+	</form>
+	<div id="map"></div>
+	<div id="ajaxContent"></div>
+	<div id="ajaxNotification"><p>loading...</p></div>
+</body>
+</html>
