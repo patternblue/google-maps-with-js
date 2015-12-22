@@ -136,7 +136,35 @@
 		}, 
 		msg : "This field is required." 
 	}); 
-	
+
+	// latitude rule (-90 to 90)
+	$.validationRules.addRule('latitude', {
+		check: function(value) {
+			if(value) { 
+				var number = parseFloat(value);
+				if(-90 <= number && number <= 90){
+					return true;	
+				}
+			}
+			return false; 
+		}, 
+		msg : "Enter a value between -90 and 90." 
+	}); 
+
+	// longitude rule (-180 to 180)
+	$.validationRules.addRule('longitude', {
+		check: function(value) {
+			if(value) { 
+				var number = parseFloat(value);
+				if(-180 <= number && number <= 180){
+					return true;	
+				}
+			}
+			return false; 
+		}, 
+		msg : "Enter a value between -180 and 180." 
+	}); 
+
 	// extend this object to jQuery prototype so any jQuery object shares these methods
 	var validationExtension = {
 		validation: function(){
